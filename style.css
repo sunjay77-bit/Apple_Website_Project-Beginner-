@@ -18,6 +18,7 @@ nav {
   top: 0;
   left: 0; 
   color: white;
+  z-index: 1;
 }
 nav img {
   height: 20px;
@@ -97,7 +98,9 @@ width: 100%;}
 margin-top: 10px;
 }
 
-.hero-content .buttons button {
+.hero-content .buttons button ,
+.single-content .buttons button{
+
 padding: 8px 20px;
 font-size: 16px;
 border-radius: 20px;
@@ -105,19 +108,84 @@ cursor: pointer;
 transition: all ease 0.3s;
 }
 
-.hero-content .buttons button:first-child{
+.hero-content .buttons button:first-child,
+.single-content .buttons button:first-child
+{
     background-color: blue;
     color: white;
     margin-right: 20px;
     border: none;
 }
 
-.hero-content .buttons button:last-child{
+.hero-content .buttons button:last-child, 
+.single-content .buttons button:last-child
+{
     background-color: transparent;
     border:1px solid blue ;
     color: blue;   
 }
-.hero-content .buttons button:last-child:hover{
+.hero-content .buttons button:last-child:hover,
+.single-content .buttons button:last-child:hover
+{
     background-color: blue;
     color:white
+}
+
+
+/* Collection */
+
+.collection {
+padding: 16px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+
+}
+.singlecollection{
+    /* border: 1px solid blue; */
+    height:80vh;
+    position: relative;
+}
+.singlecollection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.single-content{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    /* border: 1px solid pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.singlecollection p{
+font-size: 24px;
+}
+
+/* footer */
+footer img{
+height: 80px;
+width: 80px;
+margin-bottom: 20px;
+}
+footer{
+    padding:60px 40px;
+    background-color: #333333;
+    height:60vh;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.single-footer{
+    color:white;
+}
+.single-footer ul{
+    list-style: none;
 }
