@@ -8,15 +8,16 @@
 nav {
   height: 40px;
   width: 100%;
-  /* background-color: grey; */
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   gap: 30px;
   position: fixed;
   top: 0;
   left: 0; 
+  color: white;
 }
 nav img {
   height: 20px;
@@ -46,8 +47,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     gap: 10px;
+    background-color: grey;
+    color: white;
 }
 .banner button {
     border: none;
