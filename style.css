@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  padding-top: 40px;
+}
+
 nav {
   height: 40px;
   width: 100%;
@@ -16,7 +20,7 @@ nav {
   gap: 30px;
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   color: white;
   z-index: 1;
 }
@@ -34,158 +38,226 @@ nav ul {
 }
 
 nav ul li {
-font-size: 14px;
-cursor: pointer;
+  font-size: 14px;
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
 }
 
-body {
-    padding-top: 40px;
+/* Media queries */
+
+@media (max-width: 1100px) {
+  nav,
+  nav ul {
+    gap: 20px;
+  }
 }
+
+@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+}
+
+/* Banner */
 
 .banner {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid black; */
-    gap: 10px;
-    background-color: grey;
-    color: white;
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: grey;
+  color: white;
 }
-.banner button {
-    border: none;
-    background-color: transparent;
-    color: blue;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-}
-.banner button:hover{
-text-decoration: underline;
-}
-.hero  {
-    height: 80vh;
-    width:100%;
-    position: relative;
 
+/* .banner p{
+    text-align: center;
+} */
+
+@media (max-width: 1100px) {
+  .banner {
+    padding: 0px 20px;
+  }
 }
-.hero img {height: 100%;
-width: 100%;}
+@media (max-width: 578px) {
+  .banner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-direction: column;
+  }
+  .banner p {
+    text-align: center;
+  }
+}
+
+.banner button {
+  border: none;
+  background-color: transparent;
+  color: blue;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.banner button:hover {
+  text-decoration: underline;
+}
+.hero {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+}
 
 .hero-content {
-    position: absolute;
-    top: 40px;
-    left: 0%;
-    /* border: 1px solid red; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 0%;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hero-content h1 {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 32px;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 32px;
 }
 .hero-content p {
-    font-size: 28px;
-    margin-top: 10px;
+  font-size: 28px;
+  margin-top: 10px;
 }
-.hero-content .buttons{
-margin-top: 10px;
+.hero-content .buttons {
+  margin-top: 10px;
 }
 
-.hero-content .buttons button ,
-.single-content .buttons button{
-
-padding: 8px 20px;
-font-size: 16px;
-border-radius: 20px;
-cursor: pointer;
-transition: all ease 0.3s;
+.hero-content .buttons button,
+.single-content .buttons button {
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .hero-content .buttons button:first-child,
-.single-content .buttons button:first-child
-{
-    background-color: blue;
-    color: white;
-    margin-right: 20px;
-    border: none;
+.single-content .buttons button:first-child {
+  background-color: blue;
+  color: white;
+  margin-right: 20px;
+  border: none;
 }
 
-.hero-content .buttons button:last-child, 
-.single-content .buttons button:last-child
-{
-    background-color: transparent;
-    border:1px solid blue ;
-    color: blue;   
+.hero-content .buttons button:last-child,
+.single-content .buttons button:last-child {
+  background-color: transparent;
+  border: 1px solid blue;
+  color: blue;
 }
 .hero-content .buttons button:last-child:hover,
-.single-content .buttons button:last-child:hover
-{
-    background-color: blue;
-    color:white
+.single-content .buttons button:last-child:hover {
+  background-color: blue;
+  color: white;
 }
-
+@media (max-width: 603px) {
+  .hero-content p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+}
 
 /* Collection */
 
 .collection {
-padding: 16px;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 16px;
-
+  width: 100%;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
-.singlecollection{
-    /* border: 1px solid blue; */
-    height:80vh;
-    position: relative;
+.singlecollection {
+  height: 500px;
+  position: relative;
 }
 .singlecollection img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.single-content{
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    /* border: 1px solid pink; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
+.single-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  /* border: 1px solid pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
-.singlecollection p{
-font-size:20px;
+.singlecollection p {
+  font-size: 20px;
+}
+
+@media (max-width:768px){
+    .collection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .singlecollection .single-content p {
+        font-size: 18px;
+        text-align: center;
+    }
 }
 
 /* footer */
-footer img{
-height: 80px;
-width: 80px;
-margin-bottom: 20px;
+footer img {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
 }
-footer{
-    padding:60px 40px;
-    background-color: #333333;
-    height:60vh;
+footer {
+  padding: 60px 40px;
+  background-color: #333333;
+  height: 60vh;
 }
-.footer-content{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.single-footer {
+  color: white;
+}
+.single-footer ul {
+  list-style: none;
+}
 
+@media (max-width:670px){
+    .footer-content {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
-.single-footer{
-    color:white;
-}
-.single-footer ul{
-    list-style: none;
+@media (max-width:400px){
+    .footer-content {
+        grid-template-columns: repeat(1,1fr);
+    }
 }
