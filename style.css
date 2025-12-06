@@ -238,18 +238,21 @@ footer img {
 footer {
   padding: 60px 40px;
   background-color: #333333;
-  height: 60vh;
+  height: 600px;
 }
 .footer-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .single-footer {
   color: white;
 }
 .single-footer ul {
   list-style: none;
+  cursor: pointer;
 }
+
 
 @media (max-width:670px){
     .footer-content {
@@ -260,4 +263,9 @@ footer {
     .footer-content {
         grid-template-columns: repeat(1,1fr);
     }
+}
+@media (max-width:720px){
+  footer{
+    height: 900px;
+  }
 }
